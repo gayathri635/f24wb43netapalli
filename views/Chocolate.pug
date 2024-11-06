@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  - var results = [{ brand: "Lindt", flavour: "Dark Chocolate", cocoaPercentage: 85 }, { brand: "Cadbury", flavour: "Milk Chocolate", cocoaPercentage: 30 }, { brand: "Godiva", flavour: "Hazelnut", cocoaPercentage: 50 }];
+  .container-fluid
+    .row
+      each item in results
+        .col-sm-2
+          h3 #{item.brand}
+          p Flavour: #{item.flavour}
+          p Cocoa Percentage: #{item.cocoaPercentage}%
